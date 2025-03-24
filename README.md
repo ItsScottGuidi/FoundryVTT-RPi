@@ -46,7 +46,17 @@ Next tab over to Options and select all three boxes.
 <img width="540" alt="Options" src="https://github.com/user-attachments/assets/8e8b1dd4-94e9-48d4-b861-f3cfb98b9636" />
 <br>
 </br>
-Press save then select storage.
+Press save then select Yes.
+<br>
+</br>
+<img width="679" alt="OS Customiser-p3" src="https://github.com/user-attachments/assets/fd246c9c-4fca-4143-95d8-da8e9256a1f3" />
+<br>
+</br>
+Select storage and begin writing the OS. Once the Imager is finished, the storage device will automatically eject itself.
+<br>
+</br>
+Place the storage in your Pi and switch on your device. From another PC or Mac launch the Terminal app and login to the Pi using SSH, using the following command. <code>ssh piusername@ip-address-of-pi</code>
+When prompted type in your password for the Pi and answer Yes to fingerprint.
 <br>
 </br>
 
