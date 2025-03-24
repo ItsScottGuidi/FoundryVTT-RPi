@@ -79,7 +79,7 @@ Type in <pre><code>sudo apt update</code></pre> then <pre><code>sudo apt upgrade
 
 <pre><code>sudo ufw allow 443</code></pre>
 
-<pre><code>sudo ufw enable</code></pre> -> (y)es - we added port 22 over tcp - so our ssh session wont be terminated.
+<pre><code>sudo ufw enable</code></pre> -> (y)es - we added port 22 over tcp - so our ssh session won't be terminated.
 
 <h2>Installing Docker</h2>
 
