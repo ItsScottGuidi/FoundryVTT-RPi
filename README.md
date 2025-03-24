@@ -1,6 +1,6 @@
 # FoundryVTT-RPi
 
-I am going to show you how to setup FoundryVTT on a Raspberry Pi.
+I am going to show you how to setup FoundryVTT on a Raspberry Pi with a Cloudflare Tunnel.
 
 # Installing Raspberry Pi OS
 
