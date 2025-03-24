@@ -12,7 +12,7 @@ Go to https://www.raspberrypi.com/software/ and download Raspberry Pi Imager for
 <br>
 </br>
 To install on Raspberry Pi OS, type
-<code>sudo apt install rpi-imager</code>
+<pre><code>sudo apt install rpi-imager</code></pre>
 in a Terminal window.
 <br>
 </br>
@@ -61,41 +61,35 @@ Select storage and begin writing the OS. Once the Imager is finished, the storag
 <h1>Update the Pi</h1>
 <br>
 </br>
-Place the Micro SD Card in your Pi and switch on your device. From another PC or Mac launch the Terminal app and login to the Pi using SSH, using the following command. <code>ssh piusername@ip-address-of-pi</code>
+Place the Micro SD Card in your Pi and switch on your device. From another PC or Mac launch the Terminal app and login to the Pi using SSH, using the following command. <pre><code>ssh piusername@ip-address-of-pi</code></pre>
 When prompted type in your password for the Pi and answer Yes to fingerprint. Type in password when prompted.
 <br>
 </br>
-Type in <code>sudo apt update</code> then <code>sudo apt upgrade</code> to update the Pi. Typing in 'Y' when appropriate.
+Type in <pre><code>sudo apt update</code></pre> then <pre><code>sudo apt upgrade</code></pre> to update the Pi. Typing in 'Y' when appropriate.
 
 <h2>Installing a Firewall</h2>
 
-<code>sudo apt install ufw</code>
-<br>
-</br>
-<code>clear</code>
-<br>
-</br>
-<code>sudo ufw limit 22/tcp</code>     # make sure to add this so you don't lock yourself out of your raspberry (presumably headless rpi if you followed this tutorial series)
-<br>
-</br>
-<code>sudo ufw allow 80</code>
-<br>
-</br>
-<code>sudo ufw allow 443</code>
-<br>
-</br>
-<code>sudo ufw enable</code> -> (y)es - we added port 22 over tcp - so our ssh session wont be terminated.
+<pre><code>sudo apt install ufw</code></pre>
+
+<pre><code>clear</code></pre>
+
+<pre><code>sudo ufw limit 22/tcp</code></pre>     # make sure to add this so you don't lock yourself out of your raspberry (presumably headless rpi if you followed this tutorial series)
+
+<pre><code>sudo ufw allow 80</code></pre>
+
+<pre><code>sudo ufw allow 443</code></pre>
+
+<pre><code>sudo ufw enable</code></pre> -> (y)es - we added port 22 over tcp - so our ssh session wont be terminated.
 
 <h2>Installing Docker</h2>
-<br>
-</br>
-sudo mkdir -m 1777 ~/share
 
-sudo apt install samba samba-common-bin
+<pre><code>sudo mkdir -m 1777 ~/share</code></pre>
 
-sudo nano /etc/samba/smb.conf
+<pre><code>sudo apt install samba samba-common-bin</code></pre>
 
-[share]
+<pre><code>sudo nano /etc/samba/smb.conf</code></pre>
+
+<pre><code>[share]
 Comment = pi shared folder
 Path = /home/pi/share
 Browseable = yes
@@ -103,18 +97,20 @@ Writeable = yes
 only guest = no
 create mask = 0777
 directory mask = 0777
-Public = yes
+Public = yes</code></pre>
 
-sudo smbpasswd -a pi
-sudo service smbd restart
+<pre><code><code>sudo smbpasswd -a pi</code></pre>
 
-mkdir ~/share/foundrydata
+<pre><code>sudo service smbd restart</code></pre>
 
-mkdir ~/docker
+<pre><code>mkdir ~/share/foundrydata</code></pre>
 
+<pre><code>mkdir ~/docker</code></pre>
 
-sudo nano ~/docker/docker-compose.yml
+<pre><code>sudo nano ~/docker/docker-compose.yml</code></pre>
 
+<pre>
+  <code>
 version: '3.9'
 
 services:
@@ -137,12 +133,16 @@ services:
        - target: 30000
          published: 30000
          protocol: tcp
+     </code>
+</pre>
 
-docker compose up -d
+<pre><code>docker compose up -d</code></pre>
 
-sudo ufw allow 30000
-sudo ufw allow samba
-sudo ufw reload 
+<pre><code>sudo ufw allow 30000</code></pre>
+
+<pre><code>sudo ufw allow samba</code></pre>
+
+<pre><code>sudo ufw reload</code></pre>
 
 
 
