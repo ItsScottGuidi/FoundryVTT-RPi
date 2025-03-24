@@ -99,7 +99,7 @@ create mask = 0777
 directory mask = 0777
 Public = yes</code></pre>
 
-<pre><code><code>sudo smbpasswd -a pi</code></pre>
+<pre><code>sudo smbpasswd -a pi</code></pre>
 
 <pre><code>sudo service smbd restart</code></pre>
 
@@ -144,6 +144,29 @@ services:
 
 <pre><code>sudo ufw reload</code></pre>
 
+<h1>Cloudflare Tunnel</h1>
+<p>In order to use cloudflare tunnel you will need to purchase a domain name. You can buy one directly from Cloudflare or any other domain name provider of your choice. If you choose to use a domain name provider other than Cloudflare, you must switch the DNS records over from your provider to Cloudflare otherwise the Tunnel won't work.</p>
+<p>A DNS switch over will generally take between two hours to two days to complete.</p>
+<p>Login to Cloudflare and nagivate to Zero Trust.</p>
+
+<img width="1440" alt="Screenshot 2025-03-24 at 15 10 43" src="https://github.com/user-attachments/assets/f9cea414-17c2-4ea1-969f-5005307c98dc" />
+
+<P>Navigate to Network, Tunnel then Create a Tunnel. Then name the Tunnel "Foundry" or any name of your choice.</P>
+
+<img width="1440" alt="Screenshot 2025-03-24 at 15 18 55" src="https://github.com/user-attachments/assets/e7f0d7cc-d72f-486d-96cf-720885d35362" />
+<br></br>
+<p>Proceed to the next screen, select Debian, then Arm-64.</p>
+<br></br>
+<img width="1440" alt="Screenshot 2025-03-24 at 15 11 25" src="https://github.com/user-attachments/assets/7aa5312a-2002-439e-9751-b07118f0bb11" />
+<br></br>
+<p>Copy and paste in the command underneath the heading 'if you don't have cloudflare install on your machine" into the terminal on your Mac or PC. Go back to your browser and press next to advance to the next screen.</p>
+<br></br>
+<img width="1440" alt="Screenshot 2025-03-24 at 15 11 56" src="https://github.com/user-attachments/assets/600bf564-b959-42b7-840c-d9d9e4be0b6e" />
+<br></br>
+<p>Enter the subdomain you wish your foundry instance to be called. Select your domain, then service type as HTTP and the URL the local IP Address of your Pi along with the port number of your Foundry Instance which is 30000.</p>
+<br></br>
+<img width="1440" alt="Screenshot 2025-03-24 at 15 22 04" src="https://github.com/user-attachments/assets/c5028f29-8e51-411b-9760-379908c0ea94" />
+<p>Now save your Tunnel. You should now be able to access Foundry VTT through your own unique URL.</p>
 
 
 
