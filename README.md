@@ -146,7 +146,7 @@ services:
 
 <pre><code>sudo apt-get install python3 python3-pip</code></pre>
 
-<pre><code>sudo pip3 install docker-compose</code></pre>
+<pre><code>sudo apt install docker-compose</code></pre>
 
 <pre><code>sudo systemctl enable docker</code></pre>
 
