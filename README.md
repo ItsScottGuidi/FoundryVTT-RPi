@@ -163,7 +163,7 @@ services:
 <br></br>
 <img width="1440" alt="Screenshot 2025-03-24 at 15 11 56" src="https://github.com/user-attachments/assets/600bf564-b959-42b7-840c-d9d9e4be0b6e" />
 <br></br>
-<p>Enter the subdomain you wish your foundry instance to be called. Select your domain, then service type as HTTP and the URL the local IP Address of your Pi along with the port number of your Foundry Instance which is 30000.</p>
+<p>Enter the subdomain you wish your foundry instance to be called. Select your domain, then service type as HTTP and the URL the local IP Address of your Pi along with the port number of your Foundry Instance which is 30000. So in my example the IP Address would be http://192.168.4.101:30000</p>
 <br></br>
 <img width="1440" alt="Screenshot 2025-03-24 at 15 22 04" src="https://github.com/user-attachments/assets/c5028f29-8e51-411b-9760-379908c0ea94" />
 <p>Now save your Tunnel. You should now be able to access Foundry VTT through your own unique URL.</p>
