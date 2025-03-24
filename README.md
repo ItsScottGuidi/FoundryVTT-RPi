@@ -135,6 +135,19 @@ services:
      </code>
 </pre>
 
+<pre><code>curl -sSL https://get.docker.com | sh</code></pre>
+<pre><code>sudo usermod -aG docker ${USER}</code></pre>
+
+<pre><code>man usermod</code></pre>
+
+<pre><code>groups ${USER}</code></pre>
+
+<pre><code>sudo apt-get install python3 python3-pip</code></pre>
+
+<pre><code>sudo pip3 install docker-compose</code></pre>
+
+<pre><code>sudo systemctl enable docker</code></pre>
+
 <pre><code>docker compose up -d</code></pre>
 
 <pre><code>sudo ufw allow 30000</code></pre>
