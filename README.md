@@ -114,16 +114,15 @@ Public = yes</code></pre>
 version: '3.9'
 
 services:
-  
   foundry:
      image: felddy/foundryvtt:release
      hostname: my_foundry_host      # change
-     network_mode: host             
+     network_mode: host
      init: true
      restart: "unless-stopped"
      volumes:
        - type: bind
-         source: <your_data_dir>    # change
+         source:     # change
          target: /data
      environment:
        - FOUNDRY_PASSWORD=          # change
