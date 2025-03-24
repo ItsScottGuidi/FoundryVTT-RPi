@@ -119,7 +119,7 @@ services:
      hostname: my_foundry_host      # change
      volumes:
        - type: bind
-         source:     # change
+         source: ~/share/foundrydata    # change
          target: /data
      environment:
        - FOUNDRY_PASSWORD=          # change
