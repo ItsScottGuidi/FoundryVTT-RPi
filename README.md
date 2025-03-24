@@ -135,6 +135,8 @@ services:
      </code>
 </pre>
 
+<pre><code>ls</code></pre>
+<pre><code>cd docker</code></pre>
 <pre><code>curl -sSL https://get.docker.com | sh</code></pre>
 <pre><code>sudo usermod -aG docker ${USER}</code></pre>
 
