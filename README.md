@@ -117,9 +117,6 @@ services:
   foundry:
      image: felddy/foundryvtt:release
      hostname: my_foundry_host      # change
-     network_mode: host
-     init: true
-     restart: "unless-stopped"
      volumes:
        - type: bind
          source:     # change
