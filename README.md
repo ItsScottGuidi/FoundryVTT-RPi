@@ -109,9 +109,7 @@ Public = yes</code></pre>
 
 <pre><code>sudo nano ~/docker/docker-compose.yml</code></pre>
 
-<pre>
-  <code>
-version: '3.9'
+<pre><code>version: '3.9'
 
 services:
   foundry:
@@ -128,9 +126,7 @@ services:
      ports:
        - target: 30000
          published: 30000
-         protocol: tcp
-     </code>
-</pre>
+         protocol: tcp</code></pre>
 
 <pre><code>ls</code></pre>
 <pre><code>cd docker</code></pre>
