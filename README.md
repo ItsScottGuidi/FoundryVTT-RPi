@@ -145,7 +145,7 @@ services:
 
 <pre><code>sudo systemctl enable docker</code></pre>
 
-<pre><code>docker compose up -d</code></pre>
+<pre><code>sudo docker compose up -d</code></pre>
 
 <pre><code>sudo ufw allow 30000</code></pre>
 
