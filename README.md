@@ -99,7 +99,7 @@ create mask = 0777
 directory mask = 0777
 Public = yes</code></pre>
 
-<pre><code>sudo smbpasswd -a pi</code></pre>
+<pre><code>sudo smbpasswd -a yourpiusername</code></pre>
 
 <pre><code>sudo service smbd restart</code></pre>
 
